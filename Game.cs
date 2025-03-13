@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Media;
 
 namespace DungeonExplorer
 {
     internal class Game
     {
-        private Player player;
-        private Room currentRoom;
+        private Player Player {get; set;}
+        private Room Room {get; set;}
 
         public Game()
         {
