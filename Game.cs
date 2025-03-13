@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Media;
 
 namespace DungeonExplorer
@@ -11,6 +11,11 @@ namespace DungeonExplorer
         public Game()
         {
             // Initialize the game with one room and one player
+           Console.writeline("please inout your name")
+           string playname = console.readline()
+           player = new Player(name: playname )
+           Room = new Room(description: "you are in a dark dungeon with damp air and you can hear the rythm of water dripping")
+
 
         }
         public void Start()
@@ -19,7 +24,14 @@ namespace DungeonExplorer
             bool playing = false;
             while (playing)
             {
-                // Code your playing logic here
+                Console.WriteLine(Room.GetDescription)
+                Player.Displaystatus()
+                if (Room.Item != null)
+                {
+                    Player.PickUpItem();
+
+                }
+
             }
         }
     }
