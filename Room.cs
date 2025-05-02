@@ -14,5 +14,9 @@
         {
             return description;
         }
+         public string Id { get; set; }
+        public List<Monster> Monsters { get; set; } = new List<Monster>();
+        public List<Item> Items { get; set; } = new List<Item>();
+        public Dictionary<string, string> ConnectedRooms { get; set; } = new();
     }
 }
