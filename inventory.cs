@@ -9,5 +9,9 @@ namespace DungeonExplorer
       public void AddItem(Item item) => items.Add(item);
       public void RemoveItem(Item item) => items.Remove(item);
       public IEnumerable<T> GetItemsOfType<T>() where T : Item => items.OfType<T>();
+          inventory.AddItem(new Weapon { Name = "Sword", Damage = 10 });
+  inventory.RemoveItem(sword);
+
+
   }
 }
