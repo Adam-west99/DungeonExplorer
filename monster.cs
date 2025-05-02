@@ -1,6 +1,6 @@
 using System;
 
-namespace DungeonExplorer.Models
+namespace DungeonExplorer
 {
     public class Monster : Creature, IDamageable
     {
