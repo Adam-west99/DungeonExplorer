@@ -2,9 +2,21 @@
 
 namespace DungeonExplorer
 {
-    public class Player
+    public class Player : Creature, IDamageable
+{
+    public Inventory Inventory { get; private set; } = new Inventory();
+
+    public override void Attack(Creature target)
     {
-        public string Name { get; private set; }
+        // player attack logic
+    }
+
+    public void TakeDamage(int amount)
+    {
+        Health -= amount;
+        Console.WriteLine($"{Name} took {amount} damage!");
+    }
+    public string Name { get; private set; }
         public int Health { get; private set; }
         private List<string> inventory ;
 
@@ -20,10 +32,7 @@ namespace DungeonExplorer
             string ans = Console.Readline()
             if ans.upper == "YES"
                 inventory.Add(item)
-            
-            
-        }
-        public void Displaystatus ()
+ public void Displaystatus ()
         {
             console.writeline($"Player: {name}, Health:{health} ,  Inventory; {string.Join(", ", inventory);}")
         }
@@ -31,5 +40,10 @@ namespace DungeonExplorer
         {
             return string.Join(", ", inventory);
         }
-    }
+
+}
+
+   
+       
+    
 }
